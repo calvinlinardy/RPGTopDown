@@ -9,8 +9,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
+        if (GameManager.instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        //PlayerPrefs.DeleteAll();
+
         instance = this;
         SceneManager.sceneLoaded += LoadState;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Resources
@@ -19,20 +28,38 @@ public class GameManager : MonoBehaviour
     public List<int> weaponPrices;
     public List<int> xpTable;
 
-    //Refrences
+    // Refrences
     public Player player;
 
     // Logic
     public int pesos;
     public int experience;
-    
+
     public void SaveState()
     {
-        Debug.Log("Save State");
+        string saveFile = "";
+
+        saveFile += "0" + "|"; // int preferedSkin
+        saveFile += pesos.ToString() + "|"; // int pesos
+        saveFile += experience.ToString() + "|"; // int experience
+        saveFile += "0"; // int weaponLevel
+
+        PlayerPrefs.SetString("SaveState", saveFile);
+        Debug.Log("Game Saved!");
     }
 
     public void LoadState(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Load State");   
+        if (!PlayerPrefs.HasKey("SaveState"))
+            return;
+
+        Debug.Log("Game Loaded!");
+
+        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+
+        // Change player skin
+        pesos = int.Parse(data[1]); // Load saved pesos
+        experience = int.Parse(data[2]); // Load saved exp
+        // Change the weapon level
     }
 }
