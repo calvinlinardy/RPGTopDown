@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : Collidable
 {
-    [SerializeField] string[] sceneNames;
+    [SerializeField] string[] sceneNames = null;
 
     protected override void OnCollide(Collider2D coll)
     {
