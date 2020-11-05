@@ -7,7 +7,7 @@ public class Collidable : MonoBehaviour
     BoxCollider2D boxCollider;
     ContactFilter2D filter = default;
     Collider2D[] hits = new Collider2D[10];
-    
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -22,8 +22,8 @@ public class Collidable : MonoBehaviour
         {
             if (hits[i] == null)
                 continue;
-                OnCollide(hits[i]);
-                hits[i] = null;
+            OnCollide(hits[i]);
+            hits[i] = null;
         }
     }
 
