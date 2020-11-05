@@ -25,7 +25,6 @@ public class Weapon : Collidable
     protected override void Update()
     {
         base.Update();
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Time.time - lastSwing > cooldown)
@@ -38,7 +37,13 @@ public class Weapon : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-
+        if (coll.tag == "Fighter")
+        {
+            if (coll.name != "Player")
+            {
+                Debug.Log(coll.name);
+            }
+        }
     }
 
     private void Swing()
