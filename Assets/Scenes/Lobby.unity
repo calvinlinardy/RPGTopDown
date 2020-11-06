@@ -12072,8 +12072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b9bc3b56a50c24785017d434256ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  pushForce: 0
+  damage: 5
+  pushForce: 3
 --- !u!1 &1544830757
 GameObject:
   m_ObjectHideFlags: 0
@@ -12360,7 +12360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePoint: 1
-  pushForce: 2
+  pushForce: 5
   weaponLevel: 0
 --- !u!212 &1779653351
 SpriteRenderer:
@@ -42889,6 +42889,16 @@ PrefabInstance:
     - target: {fileID: 8573268507868857893, guid: 3411c09c3f24dcd4d87f187b896b25bb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573268507868857894, guid: 3411c09c3f24dcd4d87f187b896b25bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573268507868857894, guid: 3411c09c3f24dcd4d87f187b896b25bb,
+        type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8573268507868857898, guid: 3411c09c3f24dcd4d87f187b896b25bb,
