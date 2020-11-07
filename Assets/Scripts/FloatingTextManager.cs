@@ -14,7 +14,6 @@ public class FloatingTextManager : MonoBehaviour
     {
         foreach (FloatingText txt in floatingTexts)
             txt.UpdateFloatingText();
-
     }
     public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
