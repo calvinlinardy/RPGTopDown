@@ -21,10 +21,6 @@ public abstract class Mover : Fighter
 
     protected virtual void UpdateMotor(Vector3 input)
     {
-        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed);
-
-        transform.Translate(moveDelta * Time.deltaTime * movementSpeed);
-
         if (moveDelta.x > 0)
         {
             transform.localScale = startingLocalScale;
@@ -33,5 +29,12 @@ public abstract class Mover : Fighter
         {
             transform.localScale = new Vector2(startingLocalScale.x * -1, startingLocalScale.y);
         }
+
+        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed);
+        // Add push force if any
+        moveDelta += pushDirection;
+        // Reduce push force every frame, based on recovery speed
+        pushDirection = Vector3.Lerp(pushDirection, Vector3.zero, pushRecoverySpeed);
+        transform.Translate(moveDelta * Time.deltaTime * movementSpeed);
     }
 }
