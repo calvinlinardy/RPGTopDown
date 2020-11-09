@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public List<int> weaponPrices;
     public List<int> xpTable;
 
-    // Refrences
+    // References
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
@@ -97,6 +97,20 @@ public class GameManager : MonoBehaviour
         return xp;
     }
 
+    public void GrantXp(int xp)
+    {
+        int currLevel = GetCurrentLevel();
+        experience += xp;
+        if (currLevel < GetCurrentLevel())
+            OnLevelUp();
+    }
+
+    public void OnLevelUp()
+    {
+        GameManager.instance.ShowText("LEVEL UP!", 30, Color.yellow, transform.position, Vector3.up * 40, 1.5f);
+        player.OnLevelUp();
+    }
+
     public void SaveState()
     {
         string saveFile = "";
@@ -121,7 +135,12 @@ public class GameManager : MonoBehaviour
 
         // Change player skin
         pesos = int.Parse(data[1]); // Load saved pesos
+
+        // Experience
         experience = int.Parse(data[2]); // Load saved exp
+        if (GetCurrentLevel() != 1)
+            player.SetLevel(GetCurrentLevel());
+
         // Change the weapon level
         weapon.SetWeaponLevel(int.Parse(data[3]));
     }

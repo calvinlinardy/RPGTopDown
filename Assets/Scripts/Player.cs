@@ -29,4 +29,18 @@ public class Player : Mover
     {
         spriteRenderer.sprite = grimSprite;
     }
+
+    public void OnLevelUp()
+    {
+        maxHitpoint++;
+        hitpoint = maxHitpoint;
+    }
+
+    public void SetLevel(int level)
+    {
+        for (int i = 0; i < level; i++)
+        {
+            OnLevelUp();
+        }
+    }
 }

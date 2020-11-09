@@ -16,6 +16,7 @@ public class WishGranter : Collidable
             {
                 GameManager.instance.pesos = pesosRichAmount;
                 GameManager.instance.player.SwapGrimSprites(grimSprite);
+                GameManager.instance.player.GetComponent<SpriteRenderer>().flipX = true;
                 GameManager.instance.experience = 9999;
                 GameManager.instance.weapon.SetWeaponLevel(6);
                 isTouched = true;
@@ -34,6 +35,7 @@ public class WishGranter : Collidable
         GameManager.instance.ShowText("Why did you do that, kid?", 20, Color.gray, transform.position, Vector3.up * 60, 3.0f);
         GameManager.instance.pesos = 0;
         GameManager.instance.player.SwapGrimSprites(loserSprite);
+        GameManager.instance.player.GetComponent<SpriteRenderer>().flipX = true;
         GameManager.instance.experience = 0;
         GameManager.instance.weapon.SetWeaponLevel(0);
     }

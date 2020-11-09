@@ -85,8 +85,7 @@ public class Menu : MonoBehaviour
             int diff = currentLevelXp - previousLevelXp;
             int currentXpIntoLevel = GameManager.instance.experience - previousLevelXp;
 
-            //float completionRatio = (float)currentLevelXp / (float)diff;
-            float completionRatio = currentXpIntoLevel / diff;
+            float completionRatio = (float)currentXpIntoLevel / (float)diff;
             xpBar.localScale = new Vector3(completionRatio, 1, 1);
             xpText.text = currentXpIntoLevel.ToString() + " / " + diff;
         }
