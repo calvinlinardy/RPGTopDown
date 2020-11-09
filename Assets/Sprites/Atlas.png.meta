@@ -271,7 +271,7 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_88
   - first:
       213: 4773318063354004758
-    second: 0x72_16x16DungeonTileset.v4_89
+    second: weapon_grim
   - first:
       213: -7409135350123517624
     second: 0x72_16x16DungeonTileset.v4_90
@@ -442,7 +442,7 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_145
   - first:
       213: -7615159938796210210
-    second: 0x72_16x16DungeonTileset.v4_146
+    second: loser_shit
   - first:
       213: 2678665431603515882
     second: 0x72_16x16DungeonTileset.v4_147
@@ -457,10 +457,10 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_150
   - first:
       213: -1055439847771235250
-    second: 0x72_16x16DungeonTileset.v4_151
+    second: grim
   - first:
       213: 7895407734443937235
-    second: 0x72_16x16DungeonTileset.v4_152
+    second: grim_reaper
   - first:
       213: -3697958240959760236
     second: 0x72_16x16DungeonTileset.v4_153
@@ -688,22 +688,22 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_227
   - first:
       213: -7027413993682790196
-    second: 0x72_16x16DungeonTileset.v4_228
+    second: player_4
   - first:
       213: 4618174586824985467
-    second: 0x72_16x16DungeonTileset.v4_229
+    second: player_5
   - first:
       213: 3501319674719614977
-    second: 0x72_16x16DungeonTileset.v4_230
+    second: player_elf_0
   - first:
       213: -6223046019891202211
-    second: 0x72_16x16DungeonTileset.v4_231
+    second: player_elf_1
   - first:
       213: 5032667599256020166
-    second: 0x72_16x16DungeonTileset.v4_232
+    second: player_boxer_0
   - first:
       213: 3288386679715418562
-    second: 0x72_16x16DungeonTileset.v4_233
+    second: player_boxer_1
   - first:
       213: -3609388569021777939
     second: 0x72_16x16DungeonTileset.v4_234
@@ -718,19 +718,19 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_237
   - first:
       213: -7685701572923878998
-    second: 0x72_16x16DungeonTileset.v4_238
+    second: player_3
   - first:
       213: 6294792448575620924
-    second: 0x72_16x16DungeonTileset.v4_239
+    second: player_2
   - first:
       213: -1902292424786419459
-    second: 0x72_16x16DungeonTileset.v4_240
+    second: player_dwarf_0
   - first:
       213: 7524226673125945325
-    second: 0x72_16x16DungeonTileset.v4_241
+    second: player_dwarf_1
   - first:
       213: -5140375550938879004
-    second: 0x72_16x16DungeonTileset.v4_242
+    second: player_guard_0
   - first:
       213: 4204757487683469102
     second: 0x72_16x16DungeonTileset.v4_243
@@ -739,7 +739,7 @@ TextureImporter:
     second: 0x72_16x16DungeonTileset.v4_244
   - first:
       213: -1254183602032391468
-    second: 0x72_16x16DungeonTileset.v4_245
+    second: player_guard_1
   - first:
       213: -6782304130656964106
     second: boss_1
@@ -2109,27 +2109,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_73
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12a9738ba09c43c80800000000000000
-      internalID: -8343823161733178847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: 0x72_16x16DungeonTileset.v4_74
       rect:
         serializedVersion: 2
@@ -2445,13 +2424,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_89
+      name: weapon_grim
       rect:
         serializedVersion: 2
         x: 112
         y: 160
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3436,9 +3415,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 112
+        y: 117
         width: 16
-        height: 16
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3642,7 +3621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_146
+      name: loser_shit
       rect:
         serializedVersion: 2
         x: 0
@@ -3747,7 +3726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_151
+      name: grim
       rect:
         serializedVersion: 2
         x: 80
@@ -3768,7 +3747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_152
+      name: grim_reaper
       rect:
         serializedVersion: 2
         x: 96
@@ -4986,7 +4965,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_228
+      name: player_4
       rect:
         serializedVersion: 2
         x: 96
@@ -5007,7 +4986,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_229
+      name: player_5
       rect:
         serializedVersion: 2
         x: 112
@@ -5028,7 +5007,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_230
+      name: player_elf_0
       rect:
         serializedVersion: 2
         x: 128
@@ -5049,7 +5028,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_231
+      name: player_elf_1
       rect:
         serializedVersion: 2
         x: 144
@@ -5070,7 +5049,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_232
+      name: player_boxer_0
       rect:
         serializedVersion: 2
         x: 160
@@ -5091,7 +5070,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_233
+      name: player_boxer_1
       rect:
         serializedVersion: 2
         x: 176
@@ -5196,7 +5175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_238
+      name: player_3
       rect:
         serializedVersion: 2
         x: 96
@@ -5217,7 +5196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_239
+      name: player_2
       rect:
         serializedVersion: 2
         x: 112
@@ -5238,7 +5217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_240
+      name: player_dwarf_0
       rect:
         serializedVersion: 2
         x: 128
@@ -5259,7 +5238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_241
+      name: player_dwarf_1
       rect:
         serializedVersion: 2
         x: 144
@@ -5280,7 +5259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_242
+      name: player_guard_0
       rect:
         serializedVersion: 2
         x: 192
@@ -5343,7 +5322,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v4_245
+      name: player_guard_1
       rect:
         serializedVersion: 2
         x: 240

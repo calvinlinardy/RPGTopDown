@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     // Refrences
     public Player player;
+    public Weapon weapon;
     public FloatingTextManager floatingTextManager;
 
     // Logic
@@ -48,6 +49,54 @@ public class GameManager : MonoBehaviour
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     }
 
+    // Upgrade Weapon
+    public bool TryUpgradeWeapon()
+    {
+        // is the weapon max level?
+        if (weaponPrices.Count <= weapon.weaponLevel)
+            return false;
+
+        if (pesos >= weaponPrices[weapon.weaponLevel])
+        {
+            pesos -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+        return false;
+    }
+
+    // Experience System
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+
+        while (experience >= add)
+        {
+            add += xpTable[r];
+            r++;
+
+            if (r == xpTable.Count) // Max Level
+                return r;
+        }
+
+        return r;
+    }
+
+    public int GetXpToLevel(int level)
+    {
+        int r = 0;
+        int xp = 0;
+
+        while (r < level)
+        {
+            xp += xpTable[r];
+            r++;
+        }
+
+        return xp;
+    }
+
     public void SaveState()
     {
         string saveFile = "";
@@ -55,7 +104,7 @@ public class GameManager : MonoBehaviour
         saveFile += "0" + "|"; // int preferedSkin
         saveFile += pesos.ToString() + "|"; // int pesos
         saveFile += experience.ToString() + "|"; // int experience
-        saveFile += "0"; // int weaponLevel
+        saveFile += weapon.weaponLevel.ToString(); // int weaponLevel
 
         PlayerPrefs.SetString("SaveState", saveFile);
         Debug.Log("Game Saved!");
@@ -74,5 +123,6 @@ public class GameManager : MonoBehaviour
         pesos = int.Parse(data[1]); // Load saved pesos
         experience = int.Parse(data[2]); // Load saved exp
         // Change the weapon level
+        weapon.SetWeaponLevel(int.Parse(data[3]));
     }
 }

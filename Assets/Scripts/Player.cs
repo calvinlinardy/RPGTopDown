@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Player : Mover
 {
+    private SpriteRenderer spriteRenderer;
+
+    protected override void Start()
+    {
+        base.Start();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     private void FixedUpdate()
     {
 
@@ -11,5 +18,15 @@ public class Player : Mover
         float y = Input.GetAxisRaw("Vertical");
 
         UpdateMotor(new Vector3(x, y, 0));
+    }
+
+    public void SwapSprites(int skinid)
+    {
+        spriteRenderer.sprite = GameManager.instance.playerSprites[skinid];
+    }
+
+    public void SwapGrimSprites(Sprite grimSprite)
+    {
+        spriteRenderer.sprite = grimSprite;
     }
 }
