@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
     public Text levelText, hitpointText, pesosText, upgradeCostText, xpText;
 
     // Logic
-    private int currentCharacterSelection = 0;
+    public int currentCharacterSelection = 0;
     public Image characterSelectionSprite;
     public Image weaponSprite;
     public RectTransform xpBar;

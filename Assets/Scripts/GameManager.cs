@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject menu = null;
+    Menu myMenu;
     public static GameManager instance;
 
     // Resources
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         menu.SetActive(true);
+        myMenu = GetComponent<Menu>();
     }
 
     private void Awake()
@@ -115,7 +117,7 @@ public class GameManager : MonoBehaviour
     {
         string saveFile = "";
 
-        saveFile += "0" + "|"; // int preferedSkin
+        saveFile += myMenu.currentCharacterSelection.ToString() + "|"; // int preferedSkin
         saveFile += pesos.ToString() + "|"; // int pesos
         saveFile += experience.ToString() + "|"; // int experience
         saveFile += weapon.weaponLevel.ToString(); // int weaponLevel
@@ -133,8 +135,9 @@ public class GameManager : MonoBehaviour
 
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
-        // Change player skin
+        //player.SwapSprites(int.Parse(data[0])); // Change player skin
         pesos = int.Parse(data[1]); // Load saved pesos
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
 
         // Experience
         experience = int.Parse(data[2]); // Load saved exp
